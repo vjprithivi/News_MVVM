@@ -3,24 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/news">
+    app:startDestination="@id/News">
 
     <fragment
-        android:id="@+id/news"
-        android:name="com.task.news.news"
-        android:label="fragment_news"
-        tools:layout="@layout/fragment_news" >
+        android:id="@+id/News"
+        android:name="com.task.news.News"
+        android:label="news"
+        tools:layout="@layout/news" >
+
         <action
-            android:id="@+id/action_news_to_favorite"
-            app:destination="@id/favorite" />
+            android:id="@+id/action_News_to_Favorite"
+            app:destination="@id/Favorite" />
     </fragment>
     <fragment
-        android:id="@+id/favorite"
-        android:name="com.task.news.favorite"
-        android:label="fragment_favorite"
-        tools:layout="@layout/fragment_favorite" >
+        android:id="@+id/Favorite"
+        android:name="com.task.news.Favorite"
+        android:label="favorite"
+        tools:layout="@layout/favorite">
+
         <action
-            android:id="@+id/action_favorite_to_news"
-            app:destination="@id/news" />
+            android:id="@+id/action_Favorite_to_News"
+            app:destination="@id/News" />
     </fragment>
 </navigation>

@@ -16,7 +16,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [favorite.newInstance] factory method to
  * create an instance of this fragment.
  */
-class favorite : Fragment() {
+class Favorite : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -34,7 +34,7 @@ class favorite : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view  =  inflater.inflate(R.layout.fragment_favorite, container, false)
+        val view  =  inflater.inflate(R.layout.favorite, container, false)
 
         return view ;
     }
@@ -51,7 +51,7 @@ class favorite : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            favorite().apply {
+            Favorite().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
