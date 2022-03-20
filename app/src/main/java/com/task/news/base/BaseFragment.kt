@@ -19,6 +19,7 @@ abstract class BaseFragment<T : ViewBinding> : Fragment() {
     ): View? {
         _binding = this.setBinding()
         setHasOptionsMenu(true);
+
         return binding.root
     }
 

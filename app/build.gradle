@@ -1,20 +1,34 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-kapt'
+    id  'androidx.navigation.safeargs'
 }
 
+
 android {
-    compileSdk 32
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.task.news"
         minSdk 21
-        targetSdk 32
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+       javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += [
+                        "room.schemaLocation": "$projectDir/schemas".toString(),
+                        "room.incremental": "true"
+                ]
+            }
+        }
+
     }
+
 
     buildTypes {
         release {
@@ -30,22 +44,158 @@ android {
         jvmTarget = '1.8'
     }
 
+ /*   sourceSets {
+        val test by getting
+        val androidTest by getting
+        test.java.srcDirs("$projectDir/src/testShared".toString())
+        androidTest.java.srcDirs("$projectDir/src/testShared".toString())
+    }*/
+
+
+    packagingOptions {
+        // Exclude files not needed at runtime
+        exclude "META-INF/**"
+        exclude "*.txt"
+
+        // Exclude Kotlin metadata
+        exclude "**.kotlin_metadata"
+        exclude "**.kotlin_builtins"
+        exclude "**.kotlin_module"
+
+
+    }
     buildFeatures {
         viewBinding = true
 
     }
+
+    sourceSets {
+        main {
+            assets {
+                srcDirs 'src\\main\\assets'
+            }
+        }
+    }
+
 }
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
+
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.4.1'
     implementation 'androidx.navigation:navigation-ui-ktx:2.4.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+
+
+    implementation 'androidx.test.espresso:espresso-idling-resource:3.4.0'
+    implementation 'androidx.test:core-ktx:1.4.0'
+    implementation 'androidx.databinding:compiler:3.2.0-alpha11'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation'com.google.dagger:hilt-android:2.38.1'
+    implementation  'com.google.dagger:hilt-android-compiler:2.38.1'
+
+   def  ktx_core = "1.3.2"
+    implementation "androidx.core:core-ktx:${ktx_core}"
+    def ktx_fragment = "1.2.4"
+    implementation "androidx.fragment:fragment-ktx:${ktx_fragment}"
+    def ktx_activity ="1.1.0"
+    implementation "androidx.activity:activity-ktx:${ktx_activity}"
+    def  annotation="1.1.0"
+    implementation "androidx.annotation:annotation:${annotation}"
+
+
+
+    def room_version = "2.4.2"
+    //implementation 'androidx.room:room-compiler:2.4.2'
+    annotationProcessor 'androidx.room:room-compiler:2.4.2'
+    implementation "androidx.room:room-runtime:$room_version"
+    // To use Kotlin annotation processing tool (kapt)
+    kapt "androidx.room:room-compiler:$room_version"
+    // To use Kotlin Symbolic Processing (KSP)
+    implementation "androidx.room:room-ktx:$room_version"
+
+    //implementation 'org.jetbrains:annotations-java5:15.0'
+
+    def retrofi_version = "2.9.0"
+    implementation "com.squareup.retrofit2:retrofit:${retrofi_version}"
+    implementation "com.squareup.retrofit2:converter-gson:${retrofi_version}"
+
+    def okhttp3_version = "4.9.0"
+
+    implementation "com.squareup.okhttp3:okhttp:${okhttp3_version}"
+    implementation"com.squareup.okhttp3:logging-interceptor:${okhttp3_version}"
+    implementation"com.squareup.okhttp3:mockwebserver:${okhttp3_version}"
+
+    def Glide_version = "4.11.0"
+        implementation "com.github.bumptech.glide:glide:${Glide_version}"
+        implementation "com.github.bumptech.glide:compiler:${Glide_version}"
+        implementation "com.github.bumptech.glide:okhttp3-integration:${Glide_version}"
+
+    def coroutines_version = "1.4.2"
+    implementation  "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutines_version}"
+    implementation   "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutines_version}"
+    implementation  "org.jetbrains.kotlinx:kotlinx-coroutines-test:${coroutines_version}"
+
+
+    def lifecycle = "2.2.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:${lifecycle}"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${lifecycle}"
+    implementation"androidx.lifecycle:lifecycle-common-java8:${lifecycle}"
+
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:${lifecycle}"
+
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:${lifecycle}"
+
+    def swipeRefreshVersion = "1.1.0"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:${swipeRefreshVersion}"
+
+
+    def jUnitVersion = '4.12'
+    def androidjUnitVersion = '1.1.2'
+    def mockitoKotlinVersion = '2.2.0'
+
+    def espressoVersion = '3.1.0'
+
+    testImplementation "junit:junit:$jUnitVersion"
+    androidTestImplementation "androidx.test.ext:junit:$androidjUnitVersion"
+    androidTestImplementation("androidx.test.espresso:espresso-core:$espressoVersion", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion"
+    androidTestImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion"
+    testImplementation 'junit:junit:4.13.2'
+
+
+    def robolectric ='4.6.1'
+    testImplementation"org.robolectric:robolectric:${robolectric}"
+
+    def truth = '1.0.1'
+    testImplementation "com.google.truth:truth:${truth}"
+
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+
+    def mockitoKotlin='2.2.0'
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:${mockitoKotlin}"
+    def dexmaker_version ='2.28.1'
+    testImplementation  "com.linkedin.dexmaker:dexmaker-mockito-inline:${dexmaker_version}"
+
+    def mockito = "3.7.7"
+    def mockitoInline = "3.2.4"
+    testImplementation "org.mockito:mockito-core:${mockito}"
+    testImplementation "org.mockito:mockito-android:${mockito}"
+    testImplementation "org.mockito:mockito-inline:${mockitoInline}"
+
+    def coroutinesVersion ="1.4.2"
+    testImplementation  "org.jetbrains.kotlinx:kotlinx-coroutines-test:${coroutinesVersion}"
+
+
+
+
 }

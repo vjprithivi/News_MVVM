@@ -7,22 +7,37 @@
 
     <fragment
         android:id="@+id/News"
-        android:name="com.task.news.News"
-        android:label="news"
-        tools:layout="@layout/news" >
+        android:name="com.task.news.feed.News"
+        android:label="Today New's"
+        tools:layout="@layout/news">
 
         <action
             android:id="@+id/action_News_to_Favorite"
             app:destination="@id/Favorite" />
+        <action
+            android:id="@+id/action_News_to_NewsDetails"
+            app:destination="@id/NewsDetails" />
     </fragment>
     <fragment
         android:id="@+id/Favorite"
         android:name="com.task.news.Favorite"
         android:label="favorite"
         tools:layout="@layout/favorite">
-
         <action
-            android:id="@+id/action_Favorite_to_News"
+            android:id="@+id/action_Favorite_to_NewsDetails"
+            app:destination="@id/NewsDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/NewsDetails"
+        android:name="com.task.news.NewsDetails"
+        android:label="News Details"
+        tools:layout="@layout/newsdetails">
+        <argument
+            android:name="news"
+            app:argType="com.task.news.model.NewsArticle" />
+        <action
+            android:id="@+id/action_NewsDetails_to_News"
             app:destination="@id/News" />
+
     </fragment>
 </navigation>

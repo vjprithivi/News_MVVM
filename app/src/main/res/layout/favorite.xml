@@ -4,16 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#2196F3"
-    tools:context=".Favorite">
+    tools:context="com.task.news.Favorite">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFavoriteNews"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="2"
-        android:textColor="#FAF6F6"
-        android:textSize="100sp" />
+        android:layout_height="match_parent" />
 
 </FrameLayout>
