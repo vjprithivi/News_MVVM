@@ -1,13 +1,7 @@
-/*
- * *
- *  * Created by Rafsan Ahmad on 9/27/21, 5:30 PM
- *  * Copyright (c) 2021 . All rights reserved.
- *
- */
+
 
 @file:JvmName("Log")
-
-package com.rafsan.newsapp.util
+package com.task.news
 
 fun d(tag: String, msg: String): Int {
     println("DEBUG: $tag: $msg")

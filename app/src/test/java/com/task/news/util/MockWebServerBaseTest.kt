@@ -1,6 +1,6 @@
 
 
-package com.task.news
+package com.task.news.util
 
 import com.task.news.network.api.NewsApi
 import okhttp3.OkHttpClient

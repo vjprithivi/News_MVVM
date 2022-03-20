@@ -44,12 +44,6 @@ android {
         jvmTarget = '1.8'
     }
 
- /*   sourceSets {
-        val test by getting
-        val androidTest by getting
-        test.java.srcDirs("$projectDir/src/testShared".toString())
-        androidTest.java.srcDirs("$projectDir/src/testShared".toString())
-    }*/
 
 
     packagingOptions {
@@ -175,7 +169,7 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:$espressoVersion", {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'junit:junit:4.12'
 
 
     def robolectric = '4.6.1'
@@ -188,17 +182,19 @@ dependencies {
 
 
 
-    def dexmaker_version = '2.28.1'
-    testImplementation  "com.linkedin.dexmaker:dexmaker-mockito-inline:${dexmaker_version}"
+
+
 
     def mockito = '3.7.7'
     def mockitoInline = '3.2.4'
     def mockitoKotlin = '2.2.0'
+    def dexmaker_version = '2.28.1'
 
     testImplementation "org.mockito:mockito-core:${mockito}"
     testImplementation "org.mockito:mockito-android:${mockito}"
     testImplementation "org.mockito:mockito-inline:${mockitoInline}"
     testImplementation  "com.nhaarman.mockitokotlin2:mockito-kotlin:${mockitoKotlin}"
+    testImplementation  "com.linkedin.dexmaker:dexmaker-mockito-inline:${dexmaker_version}"
 
     def coroutinesVersion = '1.4.2'
     testImplementation  "org.jetbrains.kotlinx:kotlinx-coroutines-test:${coroutinesVersion}"

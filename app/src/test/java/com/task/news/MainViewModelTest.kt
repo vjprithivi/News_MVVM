@@ -22,6 +22,7 @@ import org.mockito.Mock
 import org.mockito.Mockito
 import org.mockito.MockitoAnnotations
 
+
 @ExperimentalCoroutinesApi
 class MainViewModelTest {
     // Executes tasks in the Architecture Components in the same thread
@@ -47,6 +48,7 @@ class MainViewModelTest {
 
     @Before
     fun setUp() {
+
         MockitoAnnotations.openMocks(this)
         viewModel = MainViewModel(
             repository = newsRepository,

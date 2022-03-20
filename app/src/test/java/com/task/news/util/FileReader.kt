@@ -1,8 +1,9 @@
 
 
-package com.task.news
+package com.task.news.util
 
 import androidx.test.platform.app.InstrumentationRegistry
+import com.task.news.NewsApp
 
 
 import java.io.IOException

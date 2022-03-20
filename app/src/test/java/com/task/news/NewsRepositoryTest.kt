@@ -13,7 +13,6 @@ import com.task.news.roomdb.NewsDatabase
 import com.task.news.state.NetworkState
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
-
 import org.junit.*
 import org.junit.runner.RunWith
 import org.mockito.ArgumentMatchers
@@ -23,10 +22,13 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
 import com.google.common.truth.Truth.assertThat
 import com.task.news.model.NewsArticle
+import com.task.news.util.MockWebServerBaseTest
 
 @ExperimentalCoroutinesApi
 @RunWith(RobolectricTestRunner::class)
-class NewsRepositoryTest : MockWebServerBaseTest() {
+class NewsRepositoryTest : MockWebServerBaseTest()
+
+{
     @get:Rule
     val instantTaskExecutorRule = InstantTaskExecutorRule()
 
