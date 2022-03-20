@@ -1,4 +1,4 @@
-package com.task.news
+package com.task.news.ui
 
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -7,7 +7,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-
+import com.task.news.R
 
 
 import com.task.news.base.BaseActivity

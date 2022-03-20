@@ -1,22 +1,19 @@
-package com.task.news
+package com.task.news.ui
 
 import android.os.Bundle
 import android.view.View
-import android.webkit.WebViewClient
-import androidx.core.view.isGone
 
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.snackbar.Snackbar
 import com.task.news.base.BaseFragment
 import com.task.news.databinding.NewsdetailsBinding
 import android.content.Intent
-import android.net.Uri
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
+import androidx.core.view.isGone
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
-import com.google.common.reflect.Reflection.getPackageName
+import com.task.news.R
 
 
 class NewsDetails : BaseFragment<NewsdetailsBinding>()

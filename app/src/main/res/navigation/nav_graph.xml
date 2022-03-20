@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/News"
-        android:name="com.task.news.feed.News"
+        android:name="com.task.news.ui.News"
         android:label="Today New's"
         tools:layout="@layout/news">
 
@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/Favorite"
-        android:name="com.task.news.Favorite"
+        android:name="com.task.news.ui.Favorite"
         android:label="Favourite"
         tools:layout="@layout/favorite">
         <action
@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/NewsDetails"
-        android:name="com.task.news.NewsDetails"
+        android:name="com.task.news.ui.NewsDetails"
         android:label="News Details"
         tools:layout="@layout/newsdetails">
         <argument

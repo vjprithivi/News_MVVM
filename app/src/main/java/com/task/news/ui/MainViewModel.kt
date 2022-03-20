@@ -1,4 +1,4 @@
-package com.task.news
+package com.task.news.ui
 
 import android.util.Log
 import androidx.lifecycle.ViewModel

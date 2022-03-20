@@ -1,15 +1,10 @@
-package com.task.news.feed
+package com.task.news.ui
 
 
-import android.app.SearchManager
-import android.content.Context
 import android.os.Bundle
 import android.view.*
-import android.widget.EditText
 
 import android.widget.Toast
-import androidx.appcompat.widget.SearchView
-import androidx.core.content.ContextCompat
 
 
 import androidx.lifecycle.lifecycleScope
@@ -17,8 +12,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import com.task.news.MainActivity
-import com.task.news.MainViewModel
 import com.task.news.R
 import com.task.news.base.BaseFragment
 import com.task.news.databinding.NewsBinding

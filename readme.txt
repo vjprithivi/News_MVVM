@@ -14,10 +14,12 @@ Below Mention the ClassName
   2.left or Right swipe the delete the favorite
 
 #Screenshots
-<img src=""  align = "left" width="270" height="480"/>
-<img src=""  align = "left" width="270" height="480"/>
-<img src=""  align = "left" width="270" height="480"/>
-<img src=""  align = "left" width="270" height="480"/>
+<img src="https://github.com/vjprithivi/News_MVVM/blob/master/screenshort/1.png"  align = "left" width="270" height="480"/>
+<img src="https://github.com/vjprithivi/News_MVVM/blob/master/screenshort/2.png"  align = "left" width="270" height="480"/>
+<img src="https://github.com/vjprithivi/News_MVVM/blob/master/screenshort/3.png"  align = "left" width="270" height="480"/>
+<img src="https://github.com/vjprithivi/News_MVVM/blob/master/screenshort/4.png"  align = "left" width="270" height="480"/>
+<img src="https://github.com/vjprithivi/News_MVVM/blob/master/screenshort/5.png"  align = "left" width="270" height="480"/>
+<img src="https://github.com/vjprithivi/News_MVVM/blob/master/screenshort/6.png"  align = "left" width="270" height="480"/>
 
   Kotlin: use of null safety, scope functions, Coroutines
   DI: Dagger-Hilt Architecture: MVVM

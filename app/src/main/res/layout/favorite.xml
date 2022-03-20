@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context="com.task.news.Favorite">
+    tools:context="com.task.news.ui.Favorite">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvFavoriteNews"

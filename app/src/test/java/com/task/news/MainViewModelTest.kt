@@ -13,6 +13,7 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.google.common.truth.Truth.assertThat
 import com.nhaarman.mockitokotlin2.whenever
+import com.task.news.ui.MainViewModel
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule

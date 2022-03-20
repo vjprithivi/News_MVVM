@@ -1,4 +1,4 @@
-package com.task.news
+package com.task.news.ui
 
 import android.os.Bundle
 
@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
+import com.task.news.R
 import com.task.news.base.BaseFragment
 import com.task.news.databinding.FavoriteBinding
 import com.task.news.ui.adapter.NewsAdapter
