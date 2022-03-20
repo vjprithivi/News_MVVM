@@ -21,7 +21,7 @@
     <fragment
         android:id="@+id/Favorite"
         android:name="com.task.news.Favorite"
-        android:label="favorite"
+        android:label="Favourite"
         tools:layout="@layout/favorite">
         <action
             android:id="@+id/action_Favorite_to_NewsDetails"
