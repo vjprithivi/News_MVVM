@@ -24,9 +24,9 @@ Below Mention the ClassName<br>
           navigation</li><br>
 <li>Retrofit for parsing network response</li><br>
 <li>local Database: Room</li><br>
-<li>Coroutines</li>
+<li>Coroutines</li><br>
 
-#Screenshots
+#Screenshots<br>
 <img src="https://github.com/vjprithivi/News_MVVM/blob/master/screenshort/1.png"  align = "left" width="270" height="480"/>
 <img src="https://github.com/vjprithivi/News_MVVM/blob/master/screenshort/2.png"  align = "left" width="270" height="480"/><br>
 <img src="https://github.com/vjprithivi/News_MVVM/blob/master/screenshort/3.png"  align = "left" width="270" height="480"/>
