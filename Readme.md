@@ -20,13 +20,17 @@ Below Mention the ClassName<br>
 <img src="https://github.com/vjprithivi/News_MVVM/blob/master/screenshort/3.png"  align = "left" width="270" height="480"/>
 <img src="https://github.com/vjprithivi/News_MVVM/blob/master/screenshort/4.png"  align = "left" width="270" height="480"/><br>
 <img src="https://github.com/vjprithivi/News_MVVM/blob/master/screenshort/5.png"  align = "left" width="270" height="480"/>
-<img src="https://github.com/vjprithivi/News_MVVM/blob/master/screenshort/6.png"  align = "left" width="270" height="480"/>
+<img src="https://github.com/vjprithivi/News_MVVM/blob/master/screenshort/6.png"  align = "left" width="270" height="480"/><br>
 
-  Kotlin: use of null safety, scope functions, Coroutines
+  Kotlin: use of null safety, scope functions, 
   <li>DI: Dagger-Hilt Architecture: MVVM </li><br>
       <li>Unit test cases,</li><br>
       <li>UI test cases</li><br>
       <li>UI: Use constraint layout</li><br>
-      <li>Android jetpack components: Lifecycle, livedata, navigation, data binding</li><br>
+      <li>Android jetpack components: <li><br>
+          Lifecycle,<br>
+          livedata, <br>
+          navigation</li><br>
       <li>Retrofit for parsing network response</li><br>
       <li>local Database: Room</li><br>
+      <li>Coroutines</li>
