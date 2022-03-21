@@ -18,7 +18,7 @@ Below Mention the ClassName<br>
 <li>Unit test cases,</li><br>
 <li>UI test cases</li><br>
 <li>UI: Use constraint layout</li><br>
-<li>Android jetpack components: </li><br>
+<li>Android jetpack components:</li><br>
           Lifecycle,<br>
           livedata, <br>
           navigation</li><br>
