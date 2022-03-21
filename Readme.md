@@ -1,17 +1,20 @@
-News Mobile App
+<B>News Mobile App</B>
 
-Api used  - > https://newsapi.org
-Api key  - Package Name -> utlis  -> Constants
+<li>Api used  - > https://newsapi.org</li><br>
+<li>Api key  - Package Name -> com.task.news.utlis  -> Constants</li><br>
 
-Below Mention the ClassName
-1.News.kt
-    click any news navigate the second second screen
-2.NewsDetails.kt
-  1.share option
-  2.favorite option
-3.favorite.kt
-  1.store the Room Database in local
-  2.left or Right swipe the delete the favorite
+
+<ul style="list-style-type:disc">
+ Package Name -> com.task.news.ui
+<li>Below Mention the ClassName</li><br>
+<li>1.News.kt</li><br>
+    <li>click any news navigate the second second screen</li><br>
+<li>2.NewsDetails.kt</li><br>
+  <li>1.share option<br></li>
+    <li>2.favorite option<br></li>
+  <li>3.favorite.kt</li><br>
+    <li>1.store the Room Database in local  </li><br>
+    <li>2.left or Right swipe the delete the favorite  </li><br>
 
 #Screenshots
 <img src="https://github.com/vjprithivi/News_MVVM/blob/master/screenshort/1.png"  align = "left" width="270" height="480"/>
@@ -22,10 +25,10 @@ Below Mention the ClassName
 <img src="https://github.com/vjprithivi/News_MVVM/blob/master/screenshort/6.png"  align = "left" width="270" height="480"/>
 
   Kotlin: use of null safety, scope functions, Coroutines
-  DI: Dagger-Hilt Architecture: MVVM
-  Unit test cases,
-  UI test cases
-  UI: Use constraint layout
-  Android jetpack components: Lifecycle, livedata, navigation, data binding
-  Retrofit for parsing network response
-  Room
+  <li>DI: Dagger-Hilt Architecture: MVVM </li><br>
+      <li>Unit test cases,</li><br>
+      <li>UI test cases</li><br>
+      <li>UI: Use constraint layout</li><br>
+      <li>Android jetpack components: Lifecycle, livedata, navigation, data binding</li><br>
+      <li>Retrofit for parsing network response</li><br>
+      <li>local Database: Room</li><br>

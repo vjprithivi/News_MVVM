@@ -114,7 +114,6 @@ dependencies {
 
 
     def room_version = "2.4.2"
-    //implementation 'androidx.room:room-compiler:2.4.2'
     annotationProcessor 'androidx.room:room-compiler:2.4.2'
     implementation "androidx.room:room-runtime:$room_version"
     // To use Kotlin annotation processing tool (kapt)
@@ -122,7 +121,6 @@ dependencies {
     // To use Kotlin Symbolic Processing (KSP)
     implementation "androidx.room:room-ktx:$room_version"
 
-    //implementation 'org.jetbrains:annotations-java5:15.0'
 
     def retrofi_version = "2.9.0"
     implementation "com.squareup.retrofit2:retrofit:${retrofi_version}"
@@ -149,9 +147,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-extensions:${lifecycle}"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${lifecycle}"
     implementation"androidx.lifecycle:lifecycle-common-java8:${lifecycle}"
-
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:${lifecycle}"
-
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:${lifecycle}"
 
     def swipeRefreshVersion = "1.1.0"
@@ -160,8 +156,6 @@ dependencies {
 
     def jUnitVersion = "4.12"
     def androidjUnitVersion = "1.1.2"
-
-
     def espressoVersion = "3.1.0"
 
     testImplementation "junit:junit:$jUnitVersion"
@@ -171,7 +165,6 @@ dependencies {
     })
     testImplementation 'junit:junit:4.12'
 
-
     def robolectric = '4.6.1'
     testImplementation"org.robolectric:robolectric:${robolectric}"
 
@@ -179,11 +172,6 @@ dependencies {
     testImplementation "com.google.truth:truth:${truth}"
 
     testImplementation "androidx.arch.core:core-testing:2.1.0"
-
-
-
-
-
 
     def mockito = '3.7.7'
     def mockitoInline = '3.2.4'
